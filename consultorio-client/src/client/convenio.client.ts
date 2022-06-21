@@ -17,7 +17,7 @@ export class ConvenioClient {
     public async findById(id: number): Promise<Convenio> {
         try {
             return (await this.axiosClient.get<Convenio>(`/${id}`)).data
-        } catch (error) {
+        } catch (error:any) {
             return Promise.reject(error.response)
         }
     }
@@ -37,7 +37,7 @@ export class ConvenioClient {
 					params: { filtros: pageRequest.filter } 
 				}
 			)).data
-		} catch (error) { 
+		} catch (error:any) { 
 			return Promise.reject(error.response) 
 		}
   	}
@@ -45,7 +45,7 @@ export class ConvenioClient {
 	public async cadastrar(convenio: Convenio): Promise<void> {
 		try {
 			return (await this.axiosClient.post('/', convenio))
-		} catch (error) {
+		} catch (error:any) {
 			return Promise.reject(error.response)
 		}
 	}
@@ -53,7 +53,7 @@ export class ConvenioClient {
 	public async editar(convenio: Convenio): Promise<void> {
 		try {
 			return (await this.axiosClient.put(`/${convenio.id}`, convenio)).data
-		} catch (error) {
+		} catch (error:any) {
 			return Promise.reject(error.response)
 		}
 	}
@@ -61,7 +61,7 @@ export class ConvenioClient {
 	public async desativar(convenio: Convenio): Promise<void> {
 		try {
 			return (await this.axiosClient.put(`/desativar/${convenio.id}`, convenio)).data
-		} catch (error) {
+		} catch (error:any) {
 			return Promise.reject(error.response)
 		}
 	}

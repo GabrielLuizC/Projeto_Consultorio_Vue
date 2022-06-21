@@ -17,7 +17,7 @@ export class HistoricoClient {
     public async findById(id: number): Promise<Historico> {
         try {
             return (await this.axiosClient.get<Historico>(`/${id}`)).data
-        } catch (error) {
+        } catch (error:any) {
             return Promise.reject(error.response)
         }
     }
@@ -37,7 +37,7 @@ export class HistoricoClient {
 					params: { filtros: pageRequest.filter } 
 				}
 			)).data
-		} catch (error) { 
+		} catch (error:any) { 
 			return Promise.reject(error.response) 
 		}
   	}
@@ -45,7 +45,7 @@ export class HistoricoClient {
 	public async cadastrar(historico: Historico): Promise<void> {
 		try {
 			return (await this.axiosClient.post('/', historico))
-		} catch (error) {
+		} catch (error:any) {
 			return Promise.reject(error.response)
 		}
 	}
@@ -53,7 +53,7 @@ export class HistoricoClient {
 	public async editar(historico: Historico): Promise<void> {
 		try {
 			return (await this.axiosClient.put(`/${historico.id}`, historico)).data
-		} catch (error) {
+		} catch (error:any) {
 			return Promise.reject(error.response)
 		}
 	}
@@ -61,7 +61,7 @@ export class HistoricoClient {
 	public async desativar(historico: Historico): Promise<void> {
 		try {
 			return (await this.axiosClient.put(`/desativar/${historico.id}`, historico)).data
-		} catch (error) {
+		} catch (error:any) {
 			return Promise.reject(error.response)
 		}
 	}

@@ -17,7 +17,7 @@ export class PacienteClient {
     public async findById(id: number): Promise<Paciente> {
         try {
             return (await this.axiosClient.get<Paciente>(`/${id}`)).data
-        } catch (error) {
+        } catch (error:any) {
             return Promise.reject(error.response)
         }
     }
@@ -37,7 +37,7 @@ export class PacienteClient {
 					params: { filtros: pageRequest.filter } 
 				}
 			)).data
-		} catch (error) { 
+		} catch (error:any) { 
 			return Promise.reject(error.response) 
 		}
   	}
@@ -45,7 +45,7 @@ export class PacienteClient {
 	public async cadastrar(paciente: Paciente): Promise<void> {
 		try {
 			return (await this.axiosClient.post('/', paciente))
-		} catch (error) {
+		} catch (error:any) {
 			return Promise.reject(error.response)
 		}
 	}
@@ -53,7 +53,7 @@ export class PacienteClient {
 	public async editar(paciente: Paciente): Promise<void> {
 		try {
 			return (await this.axiosClient.put(`/${paciente.id}`, paciente)).data
-		} catch (error) {
+		} catch (error:any) {
 			return Promise.reject(error.response)
 		}
 	}
@@ -61,7 +61,7 @@ export class PacienteClient {
 	public async desativar(paciente: Paciente): Promise<void> {
 		try {
 			return (await this.axiosClient.put(`/desativar/${paciente.id}`, paciente)).data
-		} catch (error) {
+		} catch (error:any) {
 			return Promise.reject(error.response)
 		}
 	}

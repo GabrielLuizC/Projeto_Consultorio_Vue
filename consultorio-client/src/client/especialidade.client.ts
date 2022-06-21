@@ -17,7 +17,7 @@ export class EspecialidadeClient {
     public async findById(id: number): Promise<Especialidade> {
         try {
             return (await this.axiosClient.get<Especialidade>(`/${id}`)).data
-        } catch (error) {
+        } catch (error:any) {
             return Promise.reject(error.response)
         }
     }
@@ -37,7 +37,7 @@ export class EspecialidadeClient {
 					params: { filtros: pageRequest.filter } 
 				}
 			)).data
-		} catch (error) { 
+		} catch (error:any) { 
 			return Promise.reject(error.response) 
 		}
   	}
@@ -45,7 +45,7 @@ export class EspecialidadeClient {
 	public async cadastrar(especialidade: Especialidade): Promise<void> {
 		try {
 			return (await this.axiosClient.post('/', especialidade))
-		} catch (error) {
+		} catch (error:any) {
 			return Promise.reject(error.response)
 		}
 	}
@@ -53,7 +53,7 @@ export class EspecialidadeClient {
 	public async editar(especialidade: Especialidade): Promise<void> {
 		try {
 			return (await this.axiosClient.put(`/${especialidade.id}`, especialidade)).data
-		} catch (error) {
+		} catch (error:any) {
 			return Promise.reject(error.response)
 		}
 	}
@@ -61,7 +61,7 @@ export class EspecialidadeClient {
 	public async desativar(especialidade: Especialidade): Promise<void> {
 		try {
 			return (await this.axiosClient.put(`/desativar/${especialidade.id}`, especialidade)).data
-		} catch (error) {
+		} catch (error:any) {
 			return Promise.reject(error.response)
 		}
 	}
