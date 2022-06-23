@@ -1,10 +1,10 @@
 <template>
-  <SideBar/>
+  <SideBar />
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import SideBar from '@/components/SideBar.vue';
+import { Options, Vue } from "vue-class-component";
+import SideBar from "@/components/SideBar.vue";
 
 @Options({
   components: {
@@ -15,7 +15,7 @@ export default class HomeView extends Vue {}
 </script>
 
 <style lang="scss">
-  @import "~bulma/bulma.sass";  
+@import "~bulma/bulma.sass";
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -25,16 +25,7 @@ export default class HomeView extends Vue {}
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+html {
+  background-color: #f2f2f2;
 }
 </style>

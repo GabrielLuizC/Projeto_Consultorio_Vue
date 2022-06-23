@@ -1,19 +1,45 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import SideBar from '../views/SideBar.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'home',
-    component: SideBar
+    component: () => import ('../views/MenuView.vue')
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/agendamentos',
+    name: 'agendamentos',
+    component: () => import('../views/AgendamentosView.vue')
+  },
+  {
+    path: '/historico',
+    name: 'historico',
+    component: () => import('../views/HistoricoView.vue')
+  },
+  {
+    path: '/pacientes',
+    name: 'pacientes',
+    component: () => import('../views/PacienteView.vue')
+  },
+  {
+    path: '/secretarias',
+    name: 'secretarias',
+    component: () => import('../views/SecretariaView.vue')
+  },
+  {
+    path: '/medicos',
+    name: 'medicos',
+    component: () => import('../views/MedicoView.vue')
+  },
+  {
+    path: '/especializacao',
+    name: 'especializacao',
+    component: () => import('../views/EspecializacaoView.vue')
+  },
+  {
+    path: '/convenio',
+    name: 'convenio',
+    component: () => import('../views/ConvenioView.vue')
   }
 ]
 
