@@ -3,8 +3,8 @@
     class="buttons is-flex is-flex-direction-column is-justify-content-space-around m-2"
   >
     ¨
-    <button class="btn-cadastrar mb-4">Cadastrar Paciente</button>
-    <button class="btn-search mb-1">Buscar Paciente</button>
+    <button class="btn-cadastrar mb-4">Cadastrar Secretaria</button>
+    <button class="btn-search mb-1">Buscar Secretaria</button>
   </div>
   <div class="list is-flex is-justify-content-center">
     <table class="table">
@@ -13,8 +13,8 @@
           <th>Dt.</th>
           <th>ID</th>
           <th>Nome</th>
-          <th>Tipo Atendimento</th>
-          <th>Nº Convênio</th>
+          <th>PIS</th>
+          <th>Salário</th>
           <th>Editar</th>
           <th>Desativar</th>
         </tr>
@@ -24,8 +24,8 @@
           <td><button class="btn-detail">i</button></td>
           <th>1</th>
           <td>Alberto Almeida da Silva</td>
-          <td>Convenio</td>
-          <td>5252545525</td>
+          <td>222.22222.22-2</td>
+          <td>R$ 2450,00</td>
           <td><button class="btn-edit">Editar</button></td>
           <td><button class="btn-delet">Desativar</button></td>
         </tr>
@@ -34,8 +34,8 @@
           <td><button class="btn-detail">i</button></td>
           <th>2</th>
           <td>Anderson Stompert</td>
-          <td>Particular</td>
-          <td>null</td>
+          <td>333.33333.33-3</td>
+          <td>R$ 2250,00</td>
           <td><button class="btn-edit">Editar</button></td>
           <td><button class="btn-delet">Desativar</button></td>
         </tr>
@@ -47,7 +47,7 @@
 <script lang="ts">
 import { Vue } from "vue-class-component";
 
-export default class TablePaciente extends Vue {
+export default class TableSecretaria extends Vue {
   msg!: string;
 }
 </script>
