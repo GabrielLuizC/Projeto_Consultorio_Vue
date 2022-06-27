@@ -24,7 +24,7 @@
           </p>
           <ul class="menu-list">
             <li>
-              <router-link to="/especializacao">Especialização</router-link>
+              <router-link to="/especialidade">Especialização</router-link>
             </li>
             <li><router-link to="/convenio">Convênio</router-link></li>
           </ul>
@@ -70,7 +70,7 @@ nav {
     rgba(4, 116, 191, 1) 86%,
     rgba(0, 212, 255, 1) 100%
   );
-  height: 101.9vh;
+  //height: 101.9vh;
   box-shadow: 2px 6px 10px rgb(48, 48, 48);
 }
 

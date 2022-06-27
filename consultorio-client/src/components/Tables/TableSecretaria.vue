@@ -3,7 +3,11 @@
     class="buttons is-flex is-flex-direction-column is-justify-content-space-around m-2"
   >
     ¨
-    <button class="btn-cadastrar mb-4">Cadastrar Secretaria</button>
+    <router-link class="btn-cad" to="/secretarias/cadastrar"
+      ><button class="btn-cadastrar mb-4">
+        Cadastrar Secretaria
+      </button></router-link
+    >
     <button class="btn-search mb-1">Buscar Secretaria</button>
   </div>
   <div class="list is-flex is-justify-content-center">
@@ -23,21 +27,37 @@
         <tr>
           <td><button class="btn-detail">i</button></td>
           <th>1</th>
-          <td>Alberto Almeida da Silva</td>
+          <td>Carla Almeida da Silva</td>
           <td>222.22222.22-2</td>
           <td>R$ 2450,00</td>
-          <td><button class="btn-edit">Editar</button></td>
-          <td><button class="btn-delet">Desativar</button></td>
+          <td>
+            <router-link to="/secretarias/editar"
+              ><button class="btn-edit">Editar</button></router-link
+            >
+          </td>
+          <td>
+            <router-link to="/secretarias/desativar"
+              ><button class="btn-delet">Desativar</button></router-link
+            >
+          </td>
         </tr>
 
         <tr>
           <td><button class="btn-detail">i</button></td>
           <th>2</th>
-          <td>Anderson Stompert</td>
+          <td>Vitória Stompert</td>
           <td>333.33333.33-3</td>
           <td>R$ 2250,00</td>
-          <td><button class="btn-edit">Editar</button></td>
-          <td><button class="btn-delet">Desativar</button></td>
+          <td>
+            <router-link to="/pacientes/editar"
+              ><button class="btn-edit">Editar</button></router-link
+            >
+          </td>
+          <td>
+            <router-link to="/pacientes/desativar"
+              ><button class="btn-delet">Desativar</button></router-link
+            >
+          </td>
         </tr>
       </tbody>
     </table>
@@ -69,6 +89,9 @@ export default class TableSecretaria extends Vue {
   text-align: center;
 }
 
+.btn-cad {
+  width: 100%;
+}
 .btn-cadastrar {
   width: 60%;
   font-size: 30px;

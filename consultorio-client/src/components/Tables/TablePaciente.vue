@@ -3,7 +3,12 @@
     class="buttons is-flex is-flex-direction-column is-justify-content-space-around m-2"
   >
     ¨
-    <button class="btn-cadastrar mb-4">Cadastrar Paciente</button>
+
+    <router-link class="btn-cad" to="/pacientes/cadastrar"
+      ><button class="btn-cadastrar mb-4">
+        Cadastrar Paciente
+      </button></router-link
+    >
     <button class="btn-search mb-1">Buscar Paciente</button>
   </div>
   <div class="list is-flex is-justify-content-center">
@@ -26,8 +31,16 @@
           <td>Alberto Almeida da Silva</td>
           <td>Convenio</td>
           <td>5252545525</td>
-          <td><button class="btn-edit">Editar</button></td>
-          <td><button class="btn-delet">Desativar</button></td>
+          <td>
+            <router-link to="/pacientes/editar"
+              ><button class="btn-edit">Editar</button></router-link
+            >
+          </td>
+          <td>
+            <router-link to="/pacientes/desativar"
+              ><button class="btn-delet">Desativar</button></router-link
+            >
+          </td>
         </tr>
 
         <tr>
@@ -36,8 +49,16 @@
           <td>Anderson Stompert</td>
           <td>Particular</td>
           <td>null</td>
-          <td><button class="btn-edit">Editar</button></td>
-          <td><button class="btn-delet">Desativar</button></td>
+          <td>
+            <router-link to="/pacientes/editar"
+              ><button class="btn-edit">Editar</button></router-link
+            >
+          </td>
+          <td>
+            <router-link to="/pacientes/desativar"
+              ><button class="btn-delet">Desativar</button></router-link
+            >
+          </td>
         </tr>
       </tbody>
     </table>
@@ -67,6 +88,10 @@ export default class TablePaciente extends Vue {
 .table td {
   padding: 15px;
   text-align: center;
+}
+
+.btn-cad {
+  width: 100%;
 }
 
 .btn-cadastrar {

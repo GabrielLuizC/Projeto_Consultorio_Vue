@@ -3,7 +3,11 @@
     class="buttons is-flex is-flex-direction-column is-justify-content-space-around m-2"
   >
     ¨
-    <button class="btn-cadastrar mb-4">Cadastrar Convênio</button>
+    <router-link class="btn-cad" to="/convenio/cadastrar"
+      ><button class="btn-cadastrar mb-4">
+        Cadastrar Convênio
+      </button></router-link
+    >
     <button class="btn-search mb-1">Buscar Convênio</button>
   </div>
   <div class="list is-flex is-justify-content-center">
@@ -24,8 +28,16 @@
           <th>1</th>
           <td>UNIMED</td>
           <td>R$ 110,00</td>
-          <td><button class="btn-edit">Editar</button></td>
-          <td><button class="btn-delet">Desativar</button></td>
+          <td>
+            <router-link to="/convenio/editar"
+              ><button class="btn-edit">Editar</button></router-link
+            >
+          </td>
+          <td>
+            <router-link to="/convenio/desativar"
+              ><button class="btn-delet">Desativar</button></router-link
+            >
+          </td>
         </tr>
 
         <tr>
@@ -33,8 +45,16 @@
           <th>2</th>
           <td>ITAMED</td>
           <td>R$ 120,00</td>
-          <td><button class="btn-edit">Editar</button></td>
-          <td><button class="btn-delet">Desativar</button></td>
+          <td>
+            <router-link to="/convenio/editar"
+              ><button class="btn-edit">Editar</button></router-link
+            >
+          </td>
+          <td>
+            <router-link to="/convenio/desativar"
+              ><button class="btn-delet">Desativar</button></router-link
+            >
+          </td>
         </tr>
       </tbody>
     </table>
@@ -64,6 +84,10 @@ export default class TableConvenio extends Vue {
 .table td {
   padding: 15px;
   text-align: center;
+}
+
+.btn-cad {
+  width: 100%;
 }
 
 .btn-cadastrar {

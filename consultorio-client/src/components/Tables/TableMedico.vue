@@ -3,7 +3,9 @@
     class="buttons is-flex is-flex-direction-column is-justify-content-space-around m-2"
   >
     ¨
-    <button class="btn-cadastrar mb-4">Cadastrar Médico</button>
+    <router-link class="btn-cad" to="/medicos/cadastrar"
+      ><button class="btn-cadastrar mb-4">Cadastrar Médico</button></router-link
+    >
     <button class="btn-search mb-1">Buscar Médico</button>
   </div>
   <div class="list is-flex is-justify-content-center">
@@ -26,8 +28,16 @@
           <td>Alberto Almeida da Silva</td>
           <td>000000/PR</td>
           <td>Dermatologista</td>
-          <td><button class="btn-edit">Editar</button></td>
-          <td><button class="btn-delet">Desativar</button></td>
+          <td>
+            <router-link to="/medicos/editar"
+              ><button class="btn-edit">Editar</button></router-link
+            >
+          </td>
+          <td>
+            <router-link to="/medicos/desativar"
+              ><button class="btn-delet">Desativar</button></router-link
+            >
+          </td>
         </tr>
 
         <tr>
@@ -67,6 +77,10 @@ export default class TableMedico extends Vue {
 .table td {
   padding: 15px;
   text-align: center;
+}
+
+.btn-cad {
+  width: 100%;
 }
 
 .btn-cadastrar {

@@ -1,17 +1,17 @@
 <template>
-  <div class="medico">
-    <h1 class="has-text-weight-bold is-size-2">Consulta de Médicos</h1>
-    <TableMedico />
+  <div class="paciente">
+    <h1 class="has-text-weight-bold is-size-2">Consulta de Pacientes</h1>
+    <TablePaciente />
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import TableMedico from "../components/Tables/TableMedico.vue";
+import TablePaciente from "../../components/Tables/TablePaciente.vue";
 
 @Options({
   components: {
-    TableMedico,
+    TablePaciente,
   },
 })
 export default class HomeView extends Vue {}

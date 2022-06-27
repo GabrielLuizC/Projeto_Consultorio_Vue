@@ -1,24 +1,24 @@
 <template>
-  <div class="medico">
-    <h1 class="has-text-weight-bold is-size-2">Consulta de Convênio</h1>
-    <TableConvenio />
+  <div class="paciente-edit">
+    <h1 class="has-text-weight-bold is-size-2">Editar Paciente</h1>
+    <FormPacienteEdit />
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import TableConvenio from "../components/Tables/TableConvenio.vue";
+import FormPacienteEdit from "../../components/Forms/Paciente/FormPacienteEdit.vue";
 
 @Options({
   components: {
-    TableConvenio,
+    FormPacienteEdit,
   },
 })
 export default class HomeView extends Vue {}
 </script>
 
 <style scoped lang="scss">
-.paciente {
+.paciente-edit {
   background-color: #f2f2f2;
 }
 </style>
